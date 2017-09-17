@@ -1,0 +1,327 @@
+//START STYLING FOR PRICING, TESTIMONIALS & TEAM SECTIONS
+.pricing-plans,
+.team-list,
+.testimonials-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include respond-to('medium') {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.pricing-plan,
+.team,
+.testimonial {
+    border-radius: $card-radius;
+    text-align: center;
+    width: calc((100% - 60px)/3);
+    @include respond-to('medium') {
+        width: calc(100% - 150px);
+        margin: 20px 0;
+    }
+
+    @include respond-to('small') {
+        width: calc(100% - 100px);
+    }
+}
+
+//END STYLING FOR PRICING, TESTIMONIALS & TEAM SECTIONS
+//START STYLING FOR PRICING SECTION ONLY
+.currencies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    @include respond-to('medium') {
+        justify-content: center;
+    }
+
+    .currency-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .currency {
+            margin-left: 20px;
+            color: #B2B6B8;
+        }
+
+        .currency--active {
+            color: #6D6D6D;
+        }
+
+         :first-child::after,
+         :nth-child(2)::after {
+            content: ".";
+            padding-left: 15px;
+        }
+    }
+}
+
+.pricing-plan {
+    border: 1px solid #D8D7D7;
+    padding-bottom: 23px;
+
+    .size {
+        text-transform: uppercase;
+        color: $secondary-dark;
+        font-weight: $bold;
+        font-size: $primary-body-font;
+    }
+
+    .price {
+        color: $primary-dark;
+        font-weight: $light;
+        font-size: $tertiary-header-font;
+        @include respond-to('small') {
+            font-size: $tertiary-header-font * 0.8;
+        }
+
+        span {
+            display: inline-block;
+            color: $secondary-blue;
+            font-size: $pricing-number-font;
+            @include respond-to('small') {
+                font-size: $pricing-number-font * 0.8;
+            }
+        }
+    }
+
+    .plan-type {
+        background-color: rgba(89, 158, 255, 0.2);
+        padding: 35px 0;
+        color: $primary-dark;
+        font-weight: $regular;
+        font-size: $primary-body-font;
+    }
+
+    .plan-description {
+        color: $primary-dark;
+        font-size: $primary-body-font;
+        font-weight: $regular;
+        line-height: $tertiary-line-height;
+        padding: 30px;
+    }
+
+    .try-btn {
+        border: 1px solid #D8D7D7;
+        border-radius: $button-radius;
+        background-color: $primary-light;
+        font-size: $primary-body-font;
+        font-weight: $light;
+        text-transform: uppercase;
+        color: $button-grey;
+        padding: 15px 42px;
+    }
+}
+
+.pricing-plan-md {
+    position: relative;
+    border: 1px solid $secondary-blue;
+    overflow: hidden;
+
+    .popular-plan {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-top: 100px solid $primary-blue;
+        border-left: 100px solid transparent;
+        top: 0;
+        right: 0;
+
+        span {
+            position: absolute;
+            font-size: $primary-body-font;
+            color: $primary-light;
+            font-weight: $regular;
+            top: -75px;
+            right: 1px;
+            transform: rotate(44deg);
+            text-transform: uppercase;
+        }
+    }
+
+    .plan-type {
+        background-color: rgba(20, 171, 244, 0.2);
+    }
+
+    .try-btn {
+        background-color: $secondary-blue;
+        color: $primary-light;
+    }
+}
+
+//END STYLING FOR PRICING SECTION ONLY
+//START STYLING FOR TESTIMONIALS SECTION ONLY
+.testimonial-section {
+    background: -webkit-linear-gradient(30deg, #8c82ff 9%, #2bb9ff 91%);
+    background: -moz-linear-gradient(30deg, #8c82ff 9%, #2bb9ff 91%);
+    background: -o-linear-gradient(30deg, #8c82ff 9%, #2bb9ff 91%);
+    background: -ms-linear-gradient(30deg, #8c82ff 9%, #2bb9ff 91%);
+    background: linear-gradient(60deg, #8c82ff 9%, #2bb9ff 91%);
+
+    .content {
+        h3 {
+            color: $primary-light;
+            font-size: $tertiary-header-font;
+            font-weight: $regular;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        p {
+            color: $primary-light;
+            font-size: $primary-body-font;
+            font-weight: $regular;
+            line-height: $primary-line-height;
+            text-align: center;
+            @include respond-to('small') {
+                padding: 0 50px;
+            }
+        }
+        span {
+            display: block;
+        }
+    }
+}
+
+
+.testimonials-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @include respond-to('medium') {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.testimonial {
+
+    p {
+        background-color: $primary-light;
+        color: $primary-dark;
+        font-size: $primary-body-font;
+        font-weight: $regular;
+        line-height: $secondary-line-height;
+        padding: 36px;
+        border-radius: $card-radius;
+        border: 1px solid $primary-light;
+        text-align: center;
+    }
+
+    .title {
+        display: flex;
+        @include respond-to('medium') {
+            justify-content: center;
+        }
+
+        img {
+            margin-right: 20px;
+        }
+
+        span {
+            background-color: none;
+            border: none;
+            font-size: $primary-body-font;
+            color: $primary-light;
+            font-weight: $bold;
+            line-height: $secondary-line-height;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        .description {
+            display: block;
+            font-weight: $regular;
+            text-transform: none;
+        }
+    }
+}
+
+.toggle {
+    margin: 30px auto;
+    color: #7EB0FA;
+}
+
+//END STYLING FOR TESTIMONIALS SECTION ONLY
+//START STYLING FOR TEAM SECTION ONLY
+.team:not(.gradient-girl) {
+    padding: 20px;
+    border-top: 2px solid #33B4FF;
+    border-bottom: 2px solid #8785FF;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 2px 100%;
+    background-image: -webkit-linear-gradient(top, #33B4FF 0%, #8785FF 100%), -webkit-linear-gradient(top, #33B4FF 0%, #8785FF 100%);
+    background-image: -moz-linear-gradient(top, #33B4FF 0%, #8785FF 100%), -moz-linear-gradient(top, #33B4FF 0%, #8785FF 100%);
+    background-image: -o-linear-gradient(top, #33B4FF 0%, #8785FF 100%), -o-linear-gradient(top, #33B4FF 0%, #8785FF 100%);
+    background-image: linear-gradient(to bottom, #33B4FF 0%, #8785FF 100%), linear-gradient(to bottom, #33B4FF 0%, #8785FF 100%); 
+    //found the above code for the gradient borders online, but forgot which site it was from! 
+    .name {
+        display: block;
+        font-size: $primary-subheading-font;
+        color: $secondary-dark;
+        font-weight: $bold;
+        line-height: $primary-line-height;
+    }
+
+    .role {
+        font-size: $primary-body-font;
+        color: $secondary-dark;
+        font-weight: $regular;
+        line-height: $primary-line-height;
+    }
+    
+    .skills {
+        color: $primary-dark;
+        font-size: $primary-body-font;
+        font-weight: $regular;
+        line-height: $tertiary-line-height;
+    }
+}
+
+.team {
+    .social-icons {
+        display: flex;
+        justify-content: center;
+
+        li {
+            padding: 0 5px;
+        }
+
+        a {
+            color: #000;
+        }
+    }
+}
+
+.gradient-girl {
+    background-image: linear-gradient(to left, rgba(51, 180, 255, 0.8), rgba(135, 133, 255, 0.4)), url(../assets/julia-komarova-97256.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 392px;
+
+    .social-icons {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        bottom: 10%;
+        left: 50%;
+        width: 193px;
+        height: 38px;
+        transform: translate(-50%);
+        background-color: $primary-light;
+        border-radius: $button-radius;
+        @include respond-to('small') {
+            padding: 6px 15px;
+        }
+
+        ul {
+            margin: 0;
+        }
+    }
+}
+
+//END STYLING FOR TEAM SECTION ONLY

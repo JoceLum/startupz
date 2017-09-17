@@ -1,0 +1,80 @@
+//***********************************************/
+//************GENERAL GLOBAL STYLES**************/
+//***********************************************/
+body {
+    background-color: $primary-light;
+    font-family: $primary-font;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+//GENREAL HEADER & SUBHEADER STYLING FOR PRICING, TEAM, TESTIMONIALS & "WHY CHOOSE US?" SECTIONS
+.stats-section,
+.pricing-section,
+.team-section,
+.testimonial-section {
+    padding: 65px 0;
+}
+
+//GENREAL HEADER & SUBHEADER STYLING FOR ABOUT, PRICING, TEAM & "WHY CHOOSE US?" SECTIONS
+.about-section,
+.stats-section {
+    background-color: $body-grey;
+}
+
+.pricing-section,
+.team-section {
+    background-color: $primary-light;
+}
+
+.about-section, 
+.stats-section,
+.pricing-section,
+.team-section {
+
+    h3 {
+        color: $primary-blue;
+        font-size: $tertiary-header-font;
+        font-weight: $regular;
+        text-align: center;
+        margin-top: 0;
+        @include respond-to('small') {
+            font-size: $tertiary-header-font * 1.05;
+        }
+    }
+    p {
+        font-size: $primary-body-font;
+        color: $primary-dark;
+        line-height: $primary-line-height;
+        text-align: center;
+        @include respond-to('small') {
+            font-size: $primary-body-font * 1.05;
+            padding: 0 50px;
+        }
+
+        span {
+            display: block;
+        }
+    }
+}

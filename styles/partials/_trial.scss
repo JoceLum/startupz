@@ -1,0 +1,117 @@
+	    .trial-section {
+	        background-image: url(../assets/bg_image.png);
+	    }
+
+	    .trial-flex {
+	        display: flex;
+	        flex-wrap: wrap;
+	        flex-direction: column;
+	        justify-content: center;
+	        align-items: center;
+	        padding: 85px 0;
+	        @include respond-to('medium') {
+	            padding: 85px 40px;
+	        }
+
+	        h2 {
+	            font-size: $secondary-header-font;
+	            font-weight: $regular;
+	            color: $primary-light;
+	            margin-bottom: 0;
+	            @include respond-to('medium') {
+	                font-size: $secondary-header-font * 0.8;
+	                text-align: center;
+	            }
+	        }
+
+	        p {
+	            font-size: $primary-subheading-font;
+	            color: $primary-light;
+	            font-weight: $light;
+	            margin-top: 0;
+	            padding-bottom: 10px;
+	            @include respond-to('medium') {
+	                font-size: $primary-subheading-font * 0.8;
+	                text-align: center;
+	            }
+	        }
+
+	        form {
+	            width: 100%;
+
+	            input {
+	                border: 1px solid $primary-light;
+	                border-radius: $button-radius;
+	                padding: 15px 20px;
+	                margin-right: 52px;
+	                font-weight: $light;
+	                color: $primary-light;
+	                outline: none;
+	                @include respond-to('medium') {
+	                    display: block;
+	                    margin: 20px auto;
+	                }
+	            }
+
+	            input[type="email"],
+	            input[type="password"] {
+	                background-color: transparent;
+	            }
+	             ::-webkit-input-placeholder {
+	                color: $primary-light;
+	            }
+	             :-moz-placeholder {
+	                color: $primary-light;
+	                opacity: 1;
+	            }
+	             ::-moz-placeholder {
+	                color: $primary-light;
+	                opacity: 1;
+	            }
+	             :-ms-input-placeholder {
+	                color: $primary-light;
+	            }
+	             ::-ms-input-placeholder {
+	                color: $primary-light;
+	            }
+
+	            input[type="email"] {
+	                width: 40%;
+	                @include respond-to('medium') {
+	                    width: 50%;
+	                }
+	                @include respond-to('small') {
+	                    width: 100%;
+	                }
+	            }
+
+	            input[type="password"] {
+	                width: 25%;
+	                @include respond-to('medium') {
+	                    width: 50%;
+	                }
+	                @include respond-to('small') {
+	                    width: 100%;
+	                }
+	            }
+
+	            input[type="submit"] {
+	                background-color: $primary-light;
+	                text-transform: uppercase;
+	                color: $tertiary-blue;
+	                width: 20%;
+	                margin-right: 0;
+	                @include respond-to('medium') {
+	                    width: 30%;
+	                    margin: 0 auto;
+	                }
+	                @include respond-to('small') {
+	                    width: 100%;
+	                }
+	                &:hover {
+	                    color: $primary-light;
+	                    background-color: transparent;
+	                }
+	            }
+	        }
+	    }

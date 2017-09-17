@@ -1,0 +1,63 @@
+.features-section {
+    background: -webkit-linear-gradient(91deg, #8c82ff 8%, #2bb9ff 92%);
+    background: -moz-linear-gradient(91deg, #8c82ff 8%, #2bb9ff 92%);
+    background: -o-linear-gradient(91deg, #8c82ff 8%, #2bb9ff 92%);
+    background: -ms-linear-gradient(91deg, #8c82ff 8%, #2bb9ff 92%);
+    background: linear-gradient(-1deg, #8c82ff 8%, #2bb9ff 92%);
+}
+
+.features-flex {
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    @include respond-to('medium') {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    .laptop-img {
+        @include respond-to('small') {
+            display: none;
+        }
+    }
+
+    .features-content {
+        margin-left: 40px;
+        @include respond-to('medium') {
+            text-align: center;
+            margin: 50px 100px;
+        }
+        @include respond-to('small') {
+            margin: 50px;
+        }
+
+        h2 {
+            font-size: $secondary-header-font;
+            font-weight: $bold;
+            color: $primary-light;
+        }
+
+        p {
+            font-size: $primary-body-font;
+            font-weight: $regular;
+            color: $primary-light;
+            line-height: $primary-line-height;
+        }
+
+        .lorem-btn {
+            background-color: transparent;
+            font-size: $primary-body-font;
+            font-weight: $regular;
+            color: $primary-light;
+            border: 1px solid $primary-light;
+            border-radius: $button-radius;
+            margin-top: 30px;
+            padding: 10px 25px;
+            text-transform: uppercase;
+            &:hover {
+                color: $primary-blue;
+                background-color: $primary-light;
+            }
+        }
+    }
+}

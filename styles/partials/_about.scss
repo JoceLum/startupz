@@ -1,0 +1,66 @@
+.about-section {
+    padding-top: 62px;
+
+    .icons-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 35px 0;
+        @include respond-to('medium') {
+            padding: 50px;
+        }
+
+        .icon {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @include respond-to('small') {
+                padding: 20px;
+            }
+
+            img {
+                margin-bottom: 10px;
+                opacity: 0.5;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: $primary-body-font;
+                font-weight: $regular;
+                color: $secondary-dark;
+                opacity: 0.5;
+            }
+        }
+        .icon--active {
+            img {
+                opacity: 1;
+            }
+            &:after {
+                left: 50%;
+                top: 36%;
+                position: relative;
+                display: inline-block;
+                border-right: 7px solid transparent;
+                border-bottom: 10px solid #2bb9ff;
+                border-left: 7px solid transparent;
+                content: ''; 
+                // Pseudo element code accredited to joseramonc via GitHub - https://gist.github.com/joseramonc/1e4d3da4246f9dd7fd89
+                @include respond-to('medium') {
+                    top: 50%;
+                }
+                @include respond-to('small') {
+                    display: none;
+                }
+            }
+
+            span {
+                border-bottom: 2px solid $primary-blue;
+                opacity: 1;
+            }
+        }
+    }
+}

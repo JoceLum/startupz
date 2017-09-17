@@ -1,0 +1,39 @@
+.stats-section {
+    .icons-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 70px 0 35px 0;
+        @include respond-to('medium') {
+            padding: 50px;
+        }
+
+        .icon {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @include respond-to('small') {
+                padding: 20px;
+            }
+
+            img {
+                margin-bottom: 25px;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: $primary-body-font;
+                font-weight: $regular;
+                color: $secondary-dark;
+            }
+
+            .number {
+                font-size: $primary-stats-font;
+            }
+        }
+    }
+}
